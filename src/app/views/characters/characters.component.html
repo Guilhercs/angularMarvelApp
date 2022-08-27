@@ -1,0 +1,28 @@
+<div class="heros">
+  <div class="search-characters">
+    <div>
+      <label>Buscar:  </label>
+      <input mat-input class="inputs" id="find" placeholder="Spider-Man" type="text" [(ngModel)]="character" name="character"/>
+      <button mat-flat-button class="search" type="button" (click)="search()" ><i class="material-icons">search</i></button>
+    </div>
+  </div>
+  <div fxLayout="row wrap">
+    <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column" class="card-heros" *ngFor="let heroes of allHeros | async" style="padding: 1rem">
+      <mat-card class="card">
+       <img
+           mat-card-image
+           src="{{ heroes.thumbnail.path }}.{{ heroes.thumbnail.extension }}"
+          />
+        <h2>{{ heroes.name }}</h2>
+        <button class="details" mat-flat-button (click)="detailsCharacter(heroes.id)" type="button">Detalhes</button>
+      </mat-card>
+    </div>
+  </div>
+  <mat-paginator (page)="nextPage($event)"
+  [length]="500"
+  [pageSize]="20"
+  [pageSizeOptions]="[20]"
+  [pageIndex]="this.pagina"
+  aria-label="Select page">
+  </mat-paginator>
+</div>

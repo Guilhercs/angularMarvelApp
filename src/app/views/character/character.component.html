@@ -1,0 +1,21 @@
+<div class="card">
+  <mat-card class="mat-card">
+  <mat-card-header *ngIf="hero[0]; else carregando">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ hero[0].name }}</mat-card-title>
+  </mat-card-header>
+  <ng-template #carregando
+    ><p>Carregando</p>
+    <p></p
+  ></ng-template>
+  <img mat-card-image src="{{ hero[0].thumbnail.path }}.{{ hero[0].thumbnail.extension }}">
+  <mat-card-content>
+    <p *ngIf="hero[0].description; else semDescr">{{ hero[0].description }}</p>
+    <ng-template #semDescr
+    ><p>Não temos descrição para este personagem</p></ng-template>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="backCharacters" mat-flat-button (click)="backToListHeroes()">Voltar</button>
+  </mat-card-actions>
+  </mat-card>
+</div>

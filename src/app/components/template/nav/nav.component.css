@@ -1,0 +1,29 @@
+
+.sidenav .logo {
+  display: flex;
+  max-height: 50px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.sidenav {
+  background-color: black;
+
+}
+
+.sidenav a {
+  color: white;
+}
+
+.sidenav i {
+  padding-right: 10px;
+}
+
+.content {
+  padding: 0px;
+  background-color: white;
+}
+
+.toolbar {
+  background-color: rgb(195, 28, 28);
+}

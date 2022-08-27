@@ -1,0 +1,29 @@
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 35%;
+  background-image: url(https://img.elo7.com.br/product/600x380/3BEF5EA/papel-de-parede-adesivo-quadrinhos-marvel-preto-e-branco.jpg);
+}
+
+.mat-card {
+  max-width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+p.mat-card-title {
+  text-align: center;
+}
+
+.backCharacters {
+  background-color: rgb(195, 28, 28);
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
